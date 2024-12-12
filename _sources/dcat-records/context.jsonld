@@ -16,32 +16,28 @@
       "foaf": "http://xmlns.com/foaf/0.1/"
     },
     {
-      "time": {
+      "time": "@nest",
+      "interval": {
         "@id": "dct:temporal",
-        "@context": {
-          "interval": {
-            "@id": "w3ctime:hasTime",
-            "@container": "@list"
-          },
-          "resolution": "rec:iso8601period"
-        }
+        "@container": "@list"
+      },
+      "resolution": {
+        "@id": "dct:temporalResolution",
+        "@type": "xsd:duration"
       },
       "created": {
-        "@id": "dct:created"
+        "@id": "dct:created",
+        "@type": "xsd:dateTime"
       },
       "updated": {
-        "@id": "dct:modified"
+        "@id": "dct:modified",
+        "@type": "xsd:dateTime"
       },
-      "type": {
-        "@id": "dct:type",
-        "@type": "@id"
-      },
+      "type": "@type",
       "title": {
-        "@container": "@set",
         "@id": "dct:title"
       },
       "description": {
-        "@container": "@set",
         "@id": "dct:description"
       },
       "keywords": {
@@ -54,10 +50,9 @@
         "@type": "@id"
       },
       "language": {
-        "@id": "rec:language",
+        "@id": "dct:language",
         "@context": {
-          "code": "rec:languageCode",
-          "name": "skos:prefLabel"
+          "code": "@value"
         }
       },
       "languages": {
@@ -118,7 +113,8 @@
           "@base": "http://example.com/variables/",
           "@vocab": "https://www.opengis.net/def/ogc-api/records/"
         }
-      }
+      },
+      "dataset": "dcat:Dataset"
     }
   ]
 }

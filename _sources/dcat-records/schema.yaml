@@ -2,3 +2,38 @@
 description: 'Schema for OGCAPI records profile for GeoDCAT - defines all extra elements defined by GeoDCAT so that the JSON-LD context can map to GeoDCAT RDF'
 allOf:
   - $ref: bblocks://ogc.api.records.v1.schemas.recordGeoJSON
+  - description: "Other elements required for DCAT"
+    properties:
+      time:
+        properties: 
+          date: {}
+          timestamp: {}
+          interval: {}
+          resolution:
+            properties:
+              interval: {}
+              resolution: {}
+      properties:
+        properties:
+          created: {}
+          updated: {}
+          type: {}
+          title: {}
+          description: {}
+          keywords: {}
+          conformsTo: {}
+          language:
+            type: object
+            properties:
+              code: {}
+              name: {}
+          languages: {}
+          resourceLanguages: {}
+          externalIds: {}
+          themes: {}
+          formats: {}
+          contacts: {}
+          license: {}
+          rights: {}
+          linkTemplates: {}
+          variables: {}
